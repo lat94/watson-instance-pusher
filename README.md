@@ -2,7 +2,7 @@
 
 Backup service for Watson Assistant instances.
 
-### Prerequisites
+## Prerequisites
 
 * NodeJS v8.12.0
 
