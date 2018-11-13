@@ -40,10 +40,10 @@ After setting up the `.env` file, you just need to run it with `npm run dev` and
 Well, just remember to set it in [backup-jobs.js](/src/jobs/backup-job.js) file, as in the example bellow:
 
 ```javascript
-let backupJob = schedule.scheduleJob("* * 0 * * *", async () => {...}
+let backupJob = schedule.scheduleJob("0 0 * * *", async () => {...}
 ```
 
-The project uses `node-schedule`, so the `"* * 0 * * *"` part it's where you set the timer (default is midnight). For a more detailed reference, read the [node-schedule documentation](https://github.com/node-schedule/node-schedule/blob/master/README.md).
+The project uses `node-schedule`, so the `"0 0 * * *" ` part it's where you set the timer (default is midnight). For a more detailed reference, read the [node-schedule documentation](https://github.com/node-schedule/node-schedule/blob/master/README.md).
 
 ## Using as a REST API
 ### Resource: `/`
