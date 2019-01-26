@@ -3,9 +3,11 @@ import AssistantV1 from "watson-developer-cloud/assistant/v1";
 export class WatsonAssistantService {
     constructor(credentials) {
         this._assistant = new AssistantV1({
+            version: credentials.version,
+            iam_apikey: credentials.iam_apikey,
             username: credentials.username,
             password: credentials.password,
-            version: credentials.version
+            url: credentials.url
         });
     }
 
@@ -38,7 +40,7 @@ export class WatsonAssistantService {
             workspace_id: workspaceId,
             export: true
         }
-    
+
         return new Promise((resolve, reject) => {
             this._assistant.getWorkspace(workspaceParams, (error, response) => {
                 if (error) {
