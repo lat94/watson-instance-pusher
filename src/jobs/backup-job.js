@@ -9,9 +9,11 @@ const _logs_directory = "./logs";
 
 const _dev_credentials = {
   watson_assistant_credentials: {
+    version: process.env.WATSON_ASSISTANT_VERSION_DEV,
+    iam_apikey: process.env.WATSON_ASSISTANT_IAM_APIKEY_DEV,
     username: process.env.WATSON_ASSISTANT_USERNAME_DEV,
     password: process.env.WATSON_ASSISTANT_PASSWORD_DEV,
-    version: process.env.WATSON_ASSISTANT_VERSION_DEV
+    url: process.env.WATSON_ASSISTANT_URL_DEV
   },
   github_credentials: {
     token: process.env.GITHUB_TOKEN,
@@ -24,9 +26,11 @@ const _dev_credentials = {
 
 const _prod_credentials = {
   watson_assistant_credentials: {
+    version: process.env.WATSON_ASSISTANT_VERSION_PRD,
+    iam_apikey: process.env.WATSON_ASSISTANT_IAM_APIKEY_PRD,
     username: process.env.WATSON_ASSISTANT_USERNAME_PRD,
     password: process.env.WATSON_ASSISTANT_PASSWORD_PRD,
-    version: process.env.WATSON_ASSISTANT_VERSION_PRD
+    url: process.env.WATSON_ASSISTANT_URL_PRD
   },
   github_credentials: {
     token: process.env.GITHUB_TOKEN,
