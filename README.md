@@ -12,6 +12,8 @@ After cloning the project and running `npm install`, you just have to decide if 
 
 In case you decide to use it as a schedule service, you just need to follow the [Using as a schedule service](#using-as-a-schedule-service) section. In case you decide to use it as a REST API, go to [Using as a REST API](#using-as-a-rest-api) section.
 
+If the set of properties seems more like a clutter than anything, you can refer to the [Reminders about properties](#reminders-about-properties) section.
+
 It is important to know that the service does not create a backup repository for you. You need to create it first and than set its name in the `repo` property (in the schedule service or the REST API).
 
 ## Using as a schedule service
