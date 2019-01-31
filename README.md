@@ -14,7 +14,7 @@ In case you decide to use it as a schedule service, you just need to follow the 
 
 If the set of properties seems more like a clutter than anything, you can refer to the [Reminders about properties](#reminders-about-properties) section.
 
-It is important to know that the service does not create a backup repository for you. You need to create it first and than set its name in the `repo` property (in the schedule service or the REST API).
+It is important to know that the service does not create a backup repository for you. You need to create it first and then set its name in the `repo` property (in the schedule service or the REST API).
 
 ## Using as a schedule service
 
@@ -102,7 +102,7 @@ You can also use the IAM authentication:
 
 ##### Response
 
-It responds with the log of what happened with each instance: a metadata if it succeeds, a error object if it fails.
+It responds with the log of what happened with each instance: a metadata if it succeeds, an error object if it fails.
 
 ```json
 [
@@ -124,6 +124,6 @@ Just a few reminders about the necessary configurations:
 * `WATSON_ASSISTANT_USERNAME_`/`watson_assistant_credentials.username` and `WATSON_ASSISTANT_PASSWORD_`/`watson_assistant_credentials.password` are your credentials for Watson Assistant (former authentication);
 * `GITHUB_TOKEN`/`github_credentials.token` it's your Github Personal Access Token;
 * `GITHUB_OWNER`/`github_credentials.owner` it's your Github owner;
-* `GITHUB_REPO`/`github_credentials.repo` it's your backup repository. You just need to set its name, e.g. `"watson-instance-backup"`;;
+* `GITHUB_REPO`/`github_credentials.repo` it's your backup repository. You just need to set its name, e.g. `"watson-instance-backup"`;
 * All the URLs, IBM or not, are optional base service endpoints your services are currently using (they have default values in case nothing is set);
 * The `environment` property in the REST section is optional and can be left out from the request. If setted, it will create a folder with its name in your backup repository and set the instances inside it.
